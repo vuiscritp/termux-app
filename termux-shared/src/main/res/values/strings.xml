@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.lixus.terminal">
+    <!ENTITY TERMUX_APP_NAME "Lixus Terminal">
+    <!ENTITY TERMUX_API_APP_NAME "Lixus:API">
+    <!ENTITY TERMUX_BOOT_APP_NAME "Lixus:Boot">
+    <!ENTITY TERMUX_FLOAT_APP_NAME "Lixus:Float">
+    <!ENTITY TERMUX_STYLING_APP_NAME "Lixus:Styling">
+    <!ENTITY TERMUX_TASKER_APP_NAME "Lixus:Tasker">
+    <!ENTITY TERMUX_WIDGET_APP_NAME "Lixus:Widget">
+    <!ENTITY TERMUX_PREFIX_DIR_PATH "/data/data/com.lixus.terminal/files/usr">
+    ]>
+
+<resources>
+
+    <string name="msg_directory_absolute_path">Đường dẫn tuyệt đối thư mục %1$s: \"%2$s\"</string>
+
+
+
+    <!-- PackageUtils -->
+    <string name="error_app_not_installed_or_disabled_warning">Ứng dụng %1$s (%2$s) chưa được cài hoặc đang bị tắt.</string>
+    <string name="error_get_package_context_failed_title">Không lấy được Package Context</string>
+    <string name="error_get_package_context_failed_message">Không lấy được package context cho package \"%1$s\".
+        Có thể do app chưa được cài hoặc chữ ký APK khác với app hiện tại.</string>
+    <string name="error_get_package_context_failed_help_url_message">Xem %1$s để biết thêm chi tiết.</string>
+    <string name="error_get_component_state_failed">Không lấy được trạng thái component %1$s/%2$s</string>
+    <string name="error_enable_component_failed">Không thể bật component %1$s/%2$s</string>
+    <string name="error_disable_component_failed">Không thể tắt component %1$s/%2$s</string>
+
+
+
+    <!-- PermissionUtils -->
+    <string name="message_sudo_please_grant_permissions">Vui lòng cấp (các) quyền được yêu cầu</string>
+    <string name="error_failed_to_request_permissions">Không thể yêu cầu quyền với request code %1$d: %2$s</string>
+    <string name="error_attempted_to_check_for_permissions_not_requested">Đã cố kiểm tra quyền chưa được khai báo trong manifest: %1$s</string>
+    <string name="error_attempted_to_ask_for_permissions_not_requested">Đã cố xin quyền chưa được khai báo trong manifest: %1$s</string>
+    <string name="error_has_not_requested_legacy_external_storage">Package \"%1$s\" đang targetSdkVersion %2$d và chạy trên Android SDK %3$d nhưng chưa đặt requestLegacyExternalStorage=true trong manifest</string>
+    <string name="msg_requires_dump_and_package_usage_stats_permissions">Cần quyền `DUMP` và `PACKAGE_USAGE_STATS`</string>
+    <string name="error_display_over_other_apps_permission_not_granted">%1$s cần quyền
+        \"Hiển thị trên các ứng dụng khác\" để mở activity/service từ nền trên Android >= 10.
+        Cấp quyền tại Cài đặt Android -> Ứng dụng -> %1$s -> Nâng cao -> Vẽ trên ứng dụng khác.
+        Tên quyền có thể khác tùy thiết bị (ví dụ Xiaomi: \"Hiển thị cửa sổ pop-up khi chạy nền\"). Xem https://dontkillmyapp.com
+        để biết vấn đề theo từng máy.</string>
+
+
+
+    <!-- TermuxPluginUtils -->
+    <string name="error_allow_external_apps_ungranted">%1$s yêu cầu thuộc tính `allow-external-apps`
+        phải được đặt thành `true` trong file `%2$s`.</string>
+
+
+
+    <!-- ReportActivity -->
+    <string name="title_report_text">Nội dung báo cáo</string>
+    <string name="msg_report_truncated">**Báo cáo đã bị cắt ngắn**\n\nBáo cáo quá lớn để xem tại đây.
+        Dùng tùy chọn `Lưu vào tệp` từ menu (3 chấm góc trên phải) và mở bằng app soạn thảo văn bản.\n\n##\n\n</string>
+
+
+
+    <!-- ShareUtils -->
+    <string name="title_share_with">Chia sẻ với</string>
+    <string name="title_open_url_with">Mở URL bằng</string>
+    <string name="msg_storage_permission_not_granted">Chưa được cấp quyền lưu trữ.</string>
+    <string name="msg_file_saved_successfully">Đã lưu tệp %1$s thành công tại \"%2$s\"</string>
+
+
+
+    <!-- Shell -->
+    <string name="error_sending_sigkill_to_process">Gửi SIGKILL tới tiến trình theo yêu cầu người dùng hoặc vì Android đang dừng service thực thi</string>
+    <string name="error_executable_unset">Chưa đặt executable \"%1$s\" cho lệnh shell</string>
+    <string name="error_execution_cancelled">Thực thi đã bị hủy vì service thực thi đang bị dừng</string>
+    <string name="error_failed_to_execute_termux_session_command">Không thực thi được lệnh phiên termux \"%1$s\"</string>
+    <string name="error_failed_to_execute_app_shell_command">Không thực thi được lệnh app shell \"%1$s\"</string>
+    <string name="error_exception_received_while_executing_termux_session_command">Gặp ngoại lệ khi thực thi lệnh phiên termux \"%1$s\".\nException: %2$s</string>
+    <string name="error_exception_received_while_executing_app_shell_command">Gặp ngoại lệ khi thực thi lệnh app shell \"%1$s\".\nException: %2$s</string>
+
+
+
+    <!-- TermuxUtils -->
+    <string name="msg_report_issue">
+        Nếu muốn báo cáo lỗi này, hãy sao chép nội dung từ menu (3 chấm góc trên phải) và đăng
+        issue lên một trong các liên kết sau.
+        \n\nNếu bạn đang gửi báo cáo crash của app, vui lòng mô tả bạn đang làm gì khi xảy ra lỗi
+        và cách tái hiện nếu có thể.
+        \n\nNếu đăng trên GitHub, hãy đăng đúng repository mà báo cáo thuộc về.
+        Issue hoặc email chỉ kèm **ảnh chụp màn hình (một phần)** thay vì văn bản sao chép hoặc tệp báo cáo
+        **rất có thể sẽ bị đóng/xóa tự động**. Bạn có thể xóa thông tin thiết bị riêng tư hoặc không liên quan.
+        \n\nChúng tôi không hỗ trợ công cụ/script liên quan đến hacking. Mọi câu hỏi về chúng qua email,
+        GitHub hoặc diễn đàn cộng đồng chính thức **rất có thể sẽ bị đóng/xóa** và có thể dẫn đến
+        **cấm tạm thời hoặc vĩnh viễn**. Xem %1$s/wiki/Hacking để biết chi tiết.</string>
+
+    <string name="msg_termux_app_required_by_app">Ứng dụng &TERMUX_APP_NAME; là bắt buộc để %1$s chạy lệnh termux.</string>
+    <string name="error_termux_app_package_context_not_accessible">Không thể truy cập package context của &TERMUX_APP_NAME;.</string>
+    <string name="error_termux_prefix_dir_path_not_accessible">Thư mục $PREFIX của &TERMUX_APP_NAME; không thể truy cập bởi app %1$s.
+        Có thể do bạn chưa cài/setup &TERMUX_APP_NAME; hoặc
+        &TERMUX_APP_NAME; và %1$s có chữ ký APK khác nhau (cài từ nguồn khác nhau).
+        Cũng có thể thư mục $PREFIX \"&TERMUX_PREFIX_DIR_PATH;\" không tồn tại hoặc thiếu quyền đọc/ghi/thực thi.</string>
+
+
+
+    <!-- Miscellaneous -->
+    <string name="action_yes">Có</string>
+    <string name="action_no">Không</string>
+    <string name="action_copy">Sao chép</string>
+    <string name="action_share">Chia sẻ</string>
+    <string name="action_cancel">Hủy</string>
+    <string name="action_save_to_file">Lưu vào tệp</string>
+
+    <string name="msg_storage_permission_granted_on_request">Người dùng đã cấp quyền lưu trữ khi được yêu cầu</string>
+    <string name="msg_storage_permission_not_granted_on_request">Người dùng không cấp quyền lưu trữ khi được yêu cầu</string>
+
+
+
+    <!-- Launcher Icons -->
+    <string name="action_enable_launcher_icon">Bật icon launcher</string>
+    <string name="action_disable_launcher_icon">Tắt icon launcher</string>
+    <string name="msg_enabling_launcher_icon">Đang bật icon launcher của %1$s</string>
+    <string name="msg_disabling_launcher_icon">Đang tắt icon launcher của %1$s</string>
+    <string name="setting_launcher_icon_title">Bật icon launcher</string>
+    <string name="setting_launcher_icon_enabled_off">Icon launcher sẽ bị tắt.</string>
+    <string name="setting_launcher_icon_enabled_on">Icon launcher sẽ được bật. (Mặc định)</string>
+
+
+
+    <!-- Log Level -->
+    <string name="log_level_title">Mức log</string>
+    <string name="log_level_off">Tắt</string>
+    <string name="log_level_normal">Bình thường</string>
+    <string name="log_level_debug">Debug</string>
+    <string name="log_level_verbose">Chi tiết</string>
+    <string name="log_level_unknown">*Không rõ*</string>
+    <string name="log_level_value">Mức log logcat đã đặt thành \"%1$s\"</string>
+
+</resources>

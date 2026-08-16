@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!DOCTYPE resources [
+    <!ENTITY TERMUX_PACKAGE_NAME "com.lixus.terminal">
+    <!ENTITY TERMUX_APP_NAME "Lixus Terminal">
+    <!ENTITY TERMUX_API_APP_NAME "Lixus:API">
+    <!ENTITY TERMUX_BOOT_APP_NAME "Lixus:Boot">
+    <!ENTITY TERMUX_FLOAT_APP_NAME "Lixus:Float">
+    <!ENTITY TERMUX_STYLING_APP_NAME "Lixus:Styling">
+    <!ENTITY TERMUX_TASKER_APP_NAME "Lixus:Tasker">
+    <!ENTITY TERMUX_WIDGET_APP_NAME "Lixus:Widget">
+    ]>
+
+<resources>
+
+    <string name="application_name">&TERMUX_APP_NAME;</string>
+    <string name="shared_user_label">Người dùng &TERMUX_APP_NAME;</string>
+
+
+
+    <!-- Termux RUN_COMMAND permission -->
+    <string name="permission_run_command_label">Chạy lệnh trong môi trường &TERMUX_APP_NAME;</string>
+    <string name="permission_run_command_description">thực thi lệnh tùy ý trong môi trường &TERMUX_APP_NAME;
+        và truy cập tệp</string>
+
+
+
+    <!-- Termux Bootstrap Packages Installation -->
+    <string name="bootstrap_installer_body">Đang cài đặt gói bootstrap…</string>
+    <string name="bootstrap_error_title">Không thể cài bootstrap</string>
+    <string name="bootstrap_error_body">&TERMUX_APP_NAME; không thể cài đặt các gói bootstrap.</string>
+    <string name="bootstrap_error_abort">Hủy</string>
+    <string name="bootstrap_error_try_again">Thử lại</string>
+    <string name="bootstrap_error_not_primary_user_message">&TERMUX_APP_NAME; chỉ có thể chạy với tài khoản chính.
+        \nCác binary bootstrap được biên dịch cho &TERMUX_APP_NAME; có đường dẫn $PREFIX cố định và chỉ có thể cài
+        dưới đường dẫn:\n%1$s.</string>
+    <string name="bootstrap_error_installed_on_portable_sd">&TERMUX_APP_NAME; không thể cài trên
+        thẻ SD ngoài/di động của thiết bị.
+        \nCác binary bootstrap được biên dịch cho &TERMUX_APP_NAME; có đường dẫn $PREFIX cố định và chỉ có thể cài
+        dưới đường dẫn:\n%1$s.</string>
+
+
+
+    <!-- Terminal Sidebar and Shortcuts -->
+    <string name="action_new_session">Phiên mới</string>
+    <string name="action_new_session_failsafe">Failsafe</string>
+    <string name="title_max_terminals_reached">Đã đạt giới hạn terminal</string>
+    <string name="msg_max_terminals_reached">Hãy đóng các phiên hiện có trước khi tạo mới.</string>
+
+    <string name="title_rename_session">Đặt tên phiên</string>
+    <string name="action_rename_session_confirm">Đặt</string>
+    <string name="title_create_named_session">Phiên mới có tên</string>
+    <string name="action_create_named_session_confirm">Tạo</string>
+
+    <string name="action_toggle_soft_keyboard">Bàn phím</string>
+
+    <string name="msg_enabling_terminal_toolbar">Đang bật thanh công cụ Terminal</string>
+    <string name="msg_disabling_terminal_toolbar">Đang tắt thanh công cụ Terminal</string>
+
+
+
+    <!-- Terminal Popup -->
+    <string name="action_select_url">Chọn URL</string>
+    <string name="title_select_url_dialog">Nhấn URL để sao chép hoặc nhấn giữ để mở</string>
+    <string name="title_select_url_none_found">Không tìm thấy URL trong terminal.</string>
+    <string name="msg_select_url_copied_to_clipboard">Đã sao chép URL vào clipboard</string>
+
+    <string name="action_share_transcript">Chia sẻ transcript</string>
+    <string name="title_share_transcript">Transcript terminal</string>
+    <string name="title_share_transcript_with">Gửi transcript tới:</string>
+
+    <string name="action_share_selected_text">Chia sẻ văn bản đã chọn</string>
+    <string name="title_share_selected_text">Văn bản terminal</string>
+    <string name="title_share_selected_text_with">Gửi văn bản đã chọn tới:</string>
+
+    <string name="action_autofill_username">Tự điền tên người dùng</string>
+    <string name="action_autofill_password">Tự điền mật khẩu</string>
+
+    <string name="action_reset_terminal">Đặt lại</string>
+    <string name="msg_terminal_reset">Đã đặt lại terminal</string>
+
+    <string name="action_kill_process">Dừng tiến trình (%d)</string>
+    <string name="title_confirm_kill_process">Bạn có chắc muốn dừng phiên này?</string>
+
+    <string name="action_style_terminal">Giao diện</string>
+    <string name="action_toggle_keep_screen_on">Giữ màn hình sáng</string>
+    <string name="action_open_help">Trợ giúp</string>
+    <string name="action_open_settings">Cài đặt</string>
+
+    <string name="action_report_issue">Báo cáo lỗi</string>
+    <string name="msg_generating_report">Đang tạo báo cáo</string>
+    <string name="msg_add_termux_debug_info">Thêm thông tin debug vào báo cáo?</string>
+
+    <string name="error_styling_not_installed">Plugin &TERMUX_STYLING_APP_NAME; chưa được cài đặt.</string>
+    <string name="action_styling_install">Cài đặt</string>
+
+
+
+    <!-- Termux Notifications -->
+    <string name="notification_action_exit">Thoát</string>
+    <string name="notification_action_wake_lock">Giữ thức (wakelock)</string>
+    <string name="notification_action_wake_unlock">Bỏ wakelock</string>
+
+
+
+    <!-- TermuxService -->
+    <string name="error_display_over_other_apps_permission_not_granted_to_start_terminal">&TERMUX_APP_NAME; cần quyền
+        \"Hiển thị trên các ứng dụng khác\" để mở phiên terminal từ nền trên Android >= 10.
+        Cấp quyền tại Cài đặt -> Ứng dụng -> &TERMUX_APP_NAME; -> Nâng cao</string>
+    <string name="error_termux_service_invalid_execution_command_runner">Runner lệnh thực thi không hợp lệ tới TermuxService: `%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_runner">Runner lệnh thực thi không được hỗ trợ tới TermuxService: `%1$s`</string>
+    <string name="error_termux_service_unsupported_execution_command_shell_create_mode">Chế độ tạo shell không được hỗ trợ tới TermuxService: `%1$s`</string>
+    <string name="error_termux_service_execution_command_shell_name_unset">Tên shell chưa được đặt nhưng chế độ tạo shell `%1$s` đã được truyền</string>
+
+
+
+    <!-- Termux RunCommandService -->
+    <string name="error_run_command_service_invalid_intent_action">Intent action không hợp lệ tới RunCommandService: `%1$s`</string>
+    <string name="error_run_command_service_invalid_execution_command_runner">Runner lệnh thực thi không hợp lệ tới RunCommandService: `%1$s`</string>
+    <string name="error_run_command_service_mandatory_extra_missing">Thiếu extra bắt buộc tới RunCommandService: \"%1$s\"</string>
+    <string name="error_run_command_service_api_help">Xem %1$s để biết thêm về cách dùng RUN_COMMAND Intent.</string>
+
+
+
+    <!-- Termux File Receiver -->
+    <string name="title_file_received">Lưu tệp vào ~/downloads/</string>
+    <string name="action_file_received_edit">Sửa</string>
+    <string name="action_file_received_open_directory">Mở thư mục</string>
+
+
+
+    <!-- Miscellaneous -->
+    <string name="error_termux_service_start_failed_general">Không thể khởi động TermuxService. Kiểm tra logcat để xem lỗi.</string>
+    <string name="error_termux_service_start_failed_bg">Không thể khởi động TermuxService khi app ở nền do hạn chế nền của Android.</string>
+
+
+
+    <!-- Termux Settings -->
+    <string name="title_activity_termux_settings">Cài đặt &TERMUX_APP_NAME;</string>
+
+    <!-- Termux App Preferences -->
+    <string name="termux_preferences_title">&TERMUX_APP_NAME;</string>
+    <string name="termux_preferences_summary">Tùy chọn cho ứng dụng &TERMUX_APP_NAME;</string>
+
+        <!-- Debugging Preferences -->
+        <string name="termux_debugging_preferences_title">Gỡ lỗi</string>
+        <string name="termux_debugging_preferences_summary">Tùy chọn gỡ lỗi</string>
+
+            <!-- Logging Category -->
+            <string name="termux_logging_header">Ghi log</string>
+
+                <!-- Log Level -->
+                <string name="termux_log_level_title">Mức log</string>
+
+                <!-- Terminal View Key Logging -->
+                <string name="termux_terminal_view_key_logging_enabled_title">Ghi log phím Terminal View</string>
+                <string name="termux_terminal_view_key_logging_enabled_off">Log sẽ không ghi phím terminal view. (Mặc định)</string>
+                <string name="termux_terminal_view_key_logging_enabled_on">Logcat sẽ ghi các phím terminal view.
+                    Rất nhiều log, nên tắt khi dùng bình thường để tránh giảm hiệu năng.</string>
+
+                <!-- Plugin Error Notifications -->
+                <string name="termux_plugin_error_notifications_enabled_title">Thông báo lỗi Plugin</string>
+                <string name="termux_plugin_error_notifications_enabled_off">Tắt flash và thông báo khi plugin lỗi.</string>
+                <string name="termux_plugin_error_notifications_enabled_on">Hiện flash và thông báo khi plugin lỗi. (Mặc định)</string>
+
+                <!-- Crash Report Notifications -->
+                <string name="termux_crash_report_notifications_enabled_title">Thông báo báo cáo lỗi</string>
+                <string name="termux_crash_report_notifications_enabled_off">Tắt thông báo báo cáo lỗi.</string>
+                <string name="termux_crash_report_notifications_enabled_on">Hiện thông báo báo cáo lỗi. (Mặc định)</string>
+
+
+        <!-- Terminal IO Preferences -->
+        <string name="termux_terminal_io_preferences_title">Terminal I/O</string>
+        <string name="termux_terminal_io_preferences_summary">Tùy chọn I/O terminal</string>
+
+            <!-- Keyboard Category -->
+            <string name="termux_keyboard_header">Bàn phím</string>
+
+                <!-- Soft Keyboard -->
+                <string name="termux_soft_keyboard_enabled_title">Bật bàn phím ảo</string>
+                <string name="termux_soft_keyboard_enabled_off">Bàn phím ảo sẽ bị tắt.</string>
+                <string name="termux_soft_keyboard_enabled_on">Bàn phím ảo sẽ được bật. (Mặc định)</string>
+
+                <!-- Soft Keyboard Only If No Hardware-->
+                <string name="termux_soft_keyboard_enabled_only_if_no_hardware_title">Chỉ bật bàn phím ảo khi không có phần cứng</string>
+                <string name="termux_soft_keyboard_enabled_only_if_no_hardware_off">Bàn phím ảo vẫn bật dù đã kết nối bàn phím phần cứng. (Mặc định)</string>
+                <string name="termux_soft_keyboard_enabled_only_if_no_hardware_on">Bàn phím ảo chỉ bật khi không có bàn phím phần cứng.</string>
+
+
+        <!-- Terminal View Preferences -->
+        <string name="termux_terminal_view_preferences_title">Giao diện Terminal</string>
+        <string name="termux_terminal_view_preferences_summary">Tùy chọn giao diện terminal</string>
+
+            <!-- View Category -->
+            <string name="termux_terminal_view_view_header">Giao diện</string>
+
+                <!-- Terminal View Margin Adjustment -->
+                <string name="termux_terminal_view_terminal_margin_adjustment_title">Điều chỉnh lề Terminal</string>
+                <string name="termux_terminal_view_terminal_margin_adjustment_off">Điều chỉnh lề terminal sẽ bị tắt.</string>
+                <string name="termux_terminal_view_terminal_margin_adjustment_on">Điều chỉnh lề terminal sẽ được bật.
+                    Nên bật để khắc phục tình trạng bàn phím ảo che một phần extra keys/terminal view.
+                    Nếu gây nhấp nháy màn hình trên thiết bị của bạn thì hãy tắt. (Mặc định)</string>
+
+
+
+    <!-- Termux:API App Preferences -->
+    <string name="termux_api_preferences_title">&TERMUX_API_APP_NAME;</string>
+    <string name="termux_api_preferences_summary">Tùy chọn cho ứng dụng &TERMUX_API_APP_NAME;</string>
+
+
+
+    <!-- Termux:Float App Preferences -->
+    <string name="termux_float_preferences_title">&TERMUX_FLOAT_APP_NAME;</string>
+    <string name="termux_float_preferences_summary">Tùy chọn cho ứng dụng &TERMUX_FLOAT_APP_NAME;</string>
+
+
+
+    <!-- Termux:Tasker App Preferences -->
+    <string name="termux_tasker_preferences_title">&TERMUX_TASKER_APP_NAME;</string>
+    <string name="termux_tasker_preferences_summary">Tùy chọn cho ứng dụng &TERMUX_TASKER_APP_NAME;</string>
+
+
+
+    <!-- Termux:Widget App Preferences -->
+    <string name="termux_widget_preferences_title">&TERMUX_WIDGET_APP_NAME;</string>
+    <string name="termux_widget_preferences_summary">Tùy chọn cho ứng dụng &TERMUX_WIDGET_APP_NAME;</string>
+
+
+
+    <!-- About Preference -->
+    <string name="about_preference_title">Giới thiệu</string>
+
+    <!-- Donate Preference -->
+    <string name="donate_preference_title">Ủng hộ</string>
+
+</resources>
